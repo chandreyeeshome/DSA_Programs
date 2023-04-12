@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+int count=1;
 int Tower_of_Hanoi(int n, char src, char aux, char dest);
 int main()
 {
@@ -21,9 +22,6 @@ int Tower_of_Hanoi(int n, char src, char aux, char dest)
 		return 0;
 	}
 	Tower_of_Hanoi(n-1,src,dest,aux);
-	printf("Move Disk-%d from Tower-%c to Tower-%c\n",n,src,dest);
+	printf("Step %d --> Move Disk-%d from Tower-%c to Tower-%c\n",count++,n,src,dest);
 	Tower_of_Hanoi(n-1,aux,src,dest);
 }
-//STEP %d -->
-//int i=1;
-//i++;
